@@ -1,0 +1,271 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+/* PLANNING */
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     background-color: #f2f2f1;
+ }
+ 
+ ul {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .ms-welcome__header {
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom : 2px #000000 solid;
+ }
+
+ .ms-welcome__main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    padding: 10px 20px;
+ }
+ 
+ .ms-welcome__main > h2 {
+     width: 100%;
+     text-align: center;
+ }
+ 
+ .ms-welcome__features {
+     list-style-type: none;
+     margin-top: 20px;
+ }
+ 
+ .ms-welcome__features.ms-List .ms-ListItem {
+     padding-bottom: 20px;
+     display: -webkit-flex;
+     display: flex;
+ }
+ 
+ .ms-welcome__features.ms-List .ms-ListItem > .ms-Icon {
+     margin-right: 10px;
+ }
+ 
+ .ms-welcome__action.ms-Button--hero {
+     margin-top: 30px;
+ }
+ 
+.ms-Button.ms-Button--hero .ms-Button-label {
+  color: #0078d7;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label{
+  color: #005a9e;
+  cursor: pointer;
+}
+
+b {
+    font-weight: bold;
+}
+
+.section-userForm {
+    display: none; /* Cache par défaut */
+    margin-left: 5px;
+    flex-direction: column; /* Assure un empilement vertical si flex est utilisé */
+}
+
+.section-userForm > h2 {
+    font-weight: normal;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 20px; /* Exemple de taille de police */
+}
+
+.form-field {
+    margin-bottom: 15px; /* Espacement entre les champs du formulaire */
+    display: flex;
+    align-items: center; /* Aligne verticalement au centre */
+    gap: 5px; /* Espacement entre les éléments */
+}
+
+.form-field label {
+    width: 80px; /* Largeur fixe pour aligner les labels */
+    text-align: right; /* Aligner les textes des labels à droite */
+    margin-right: 5px; /* Ajouter de l'espace entre le label et l'input */
+}
+
+.form-field input, .form-field select {
+    flex: 1; /* Prend tout l'espace restant */
+    margin-right: 15px; /* Ajouter de l'espace entre le label et l'input */
+}
+
+.status{
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Conteneur pour centrer le bouton */
+.section-button {
+    display: flex; /* Active le modèle Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: auto; /* Prend toute la hauteur de la fenêtre */
+    padding: 10px;
+    /*background-color: #f5f5f5;*/ /* Couleur de fond optionnelle */
+}
+
+/* Style du bouton */
+.fixed-button {
+    width: 150px; /* Largeur fixe */
+    height: 30px; /* Hauteur fixe */
+    background-color: #3d556c; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 12px; /* Taille du texte */
+    cursor: pointer; /* Pointeur au survol */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Effet au survol */
+.fixed-button:hover {
+    background-color: #2f4153; /* Couleur légèrement plus sombre */
+}
+
+
+.div-listbox{
+    padding: 10px;
+    display: flex; /* Active Flexbox pour aligner les éléments en ligne */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    gap: 20px; /* Espacement entre la ListBox et le bouton */
+    justify-content: space-between
+}
+
+.button-column{
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Dispose les boutons en colonne */
+    gap: 10px; /* Ajoute un espace vertical entre les boutons */
+}
+
+.button-column > button{
+    cursor: pointer; /* Pointeur au survol */
+}
+
+.mylistbox {
+    flex: 1;
+    width: 200px; /* Largeur de la ListBox */
+    height: auto; /* S'ajuste en fonction du nombre d'éléments */
+    font-size: 12px; /* Taille du texte */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.mylistbox option {
+    padding: 5px; /* Espacement interne des options */
+}
+
+.mylistbox option:hover {
+    background-color: #f0f0f0; /* Fond gris clair au survol */
+}
+
+.div-listbox > button{
+    cursor: pointer; /* Curseur de clic */
+    padding: 0 20px; /* Largeur intérieure pour un bouton esthétique */
+    align-self: flex-end; /* Aligne le bouton en bas */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.double-listbox-container {
+    display: flex; /* Place les ListBoxes côte à côte */
+    justify-content: space-around; /* Espace égal entre les colonnes */
+    align-items: flex-start; /* Aligne les ListBoxes en haut */
+    margin-bottom: 20px; /* Espace pour le bouton en dessous */
+    margin-top: 0px; 
+}
+
+/* Conteneurs individuels des ListBoxes */
+.listbox-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Place le label au-dessus de la ListBox */
+    align-items: center;
+    gap: 10px; /* Espacement entre le label et la ListBox */
+    width: 95%;
+}
+
+.listbox-container > label{
+    font-size: 12px;
+}
+
+/* ListBoxes */
+.double-listbox {
+    flex: 1;
+    min-width: 125px; /* Largeur des ListBoxes */
+    width: 95%;
+    height: auto; /* Hauteur des ListBoxes */
+    border: 1px solid #ccc; /* Bordure fine */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille du texte */
+    padding: 5px;
+    background-color: white; /* Fond blanc */
+}
+
+
+
+/* Bouton Valider */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centre le bouton */
+    gap: 20px;
+}
+
+/* Base commune pour tous les boutons */
+.button {
+    /*width: 150px; /* Largeur fixe */
+    /*height: 40px; /* Hauteur fixe */
+    padding: 0 10px;
+    background-color: #a0a0a0; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 14px; /* Taille du texte */
+    cursor: pointer; /* Pointeur au survol */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-align: center;
+}
+
+/* Variantes pour les boutons selon leur position ou rôle */
+.button-validate {
+    position: absolute;
+    right: 15px;
+}
+
+.button-return {
+    position: absolute;
+    left: 15px;
+}
+
+.button:hover {
+    background-color: #cecece; /* Couleur légèrement plus sombre */
+}

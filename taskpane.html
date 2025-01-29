@@ -1,1 +1,163 @@
-<!doctype html><html><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width,initial-scale=1"><title>Planning Actuelia</title><script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script><script src="https://actuelia.sharepoint.com/sites/Planning/Documents%20partages/Planning%2020_01/Planning%20Actuelia/fdb58264fb885a02976a.js" type="module"></script><link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/><link href="https://actuelia.sharepoint.com/sites/Planning/Documents%20partages/Planning%2020_01/Planning%20Actuelia/dfdaaa4bf146369082c6.css" rel="stylesheet"/><script defer="defer" src="https://actuelia.sharepoint.com/sites/Planning/Documents%20partages/Planning%2020_01/Planning%20Actuelia/polyfill.d773241b6e8d674dda2d.js"></script><script defer="defer" src="https://actuelia.sharepoint.com/sites/Planning/Documents%20partages/Planning%2020_01/Planning%20Actuelia/taskpane.5272dba06bb261272269.js"></script></head><body class="ms-font-m ms-welcome ms-Fabric"><header class="ms-welcome__header ms-bgColor-neutralLighter"><img width="120" height="120" src="https://actuelia.sharepoint.com/sites/Planning/Documents%20partages/Planning%2020_01/Planning%20Actuelia/assets/logo-filled.png" alt="Logo Actuelia" title="Logo"/><h1 class="ms-font-xl" style="font-size:26px">Bienvenue dans le planning Actuelia</h1></header><section id="sec-btn-AjoutMission" class="section-button"><button id="btn-AjoutMission" class="fixed-button">Ajout Mission</button></section><section id="sec-btn-Suppression" class="section-button"><button id="btn-Suppression" class="fixed-button">Suppression Mission</button></section><section id="sec-btn-ModifierAffectationMission" class="section-button"><button id="btn-ModifierAffectationMission" class="fixed-button">Modifier Affectation</button></section><section id="sec-btn-ModifierAffectationConsultant" class="section-button"><button id="btn-ModifierAffectationConsultant" class="fixed-button">Modifier Mission(s)</button></section><section id="sec-userForm-AjoutMission" class="section-userForm"><h2 class="section-title">Ajout Mission</h2><p>Nommez la mission et choisissez l'encadrant :</p><form><div class="form-field"><label for="input-text-Mission">Mission :</label> <input id="input-text-Mission" placeholder="Saisissez un texte"/></div><div class="form-field"><label for="dropdown-Mission">Encadrant :</label> <select id="dropdown-Mission"><option value="">Chargement...</option></select></div><div class="button-container"><button class="button validate-button" id="btn-validate-AjoutMission" type="button">Valider</button> <button class="button return-button" id="btn-return-1" type="button">Retour</button></div></form><p class="status" id="status-AjoutMission"></p></section><section id="sec-userForm-SelectionConsultant" class="section-userForm"><h2 class="section-title">Sélection Consultant</h2><label for="listbox-SelectionConsultant">Choisissez les consultants pour la mission :</label><div class="div-listbox"><select class="mylistbox" id="listbox-SelectionConsultant" size="10" multiple="multiple"></select><div class="button-column"><button class="button" id="btn-validate-SelectionConsultant" type="button">Valider</button> <button class="button" id="btn-return-2" type="button">Retour</button></div></div><p class="status" id="status-SelectionConsultant"></p></section><section id="sec-userForm-AjoutMissionError" class="section-userForm"><h2 class="section-title">Erreur dans l'ajout de mission</h2><p>Nombre de mission max atteint. Veuillez supprimer une mission.</p><div class="button-container"><button class="button" id="btn-validate-AjoutMissionError" type="button">Suppression Mission</button> <button class="button" id="btn-return-3" type="button">Retour</button></div><p class="status" id="status-AjoutMissionError"></p></section><section id="sec-userForm-AjoutMissionOk" class="section-userForm"><h2 class="section-title">Mission ajoutée</h2><p id="texte-AjoutMissionOK"></p><div class="button-container"><button class="button" id="btn-return-4" type="button">Retour</button></div><p class="status" id="status-AjoutMissionOk"></p></section><section id="sec-userForm-SuppressionMission" class="section-userForm"><h2 class="section-title">Suppression Mission(s)</h2><label for="listbox-SuppressionMission">Choisissez la mission ou les missions à supprimer :</label><div class="div-listbox"><select class="mylistbox" id="listbox-SuppressionMission" size="10" multiple="multiple"></select><div class="button-column"><button class="button" id="btn-validate-SuppressionMission" type="button">Valider</button> <button class="button" id="btn-return-5" type="button">Retour</button></div></div><p class="status" id="status-SuppressionMission"></p></section><section id="sec-userForm-SuppressionMissionInter" class="section-userForm"><h2 class="section-title">Suppression Mission(s)</h2><p id="texte-SuppressionMissionInter"></p><div class="button-container"><button class="button" id="btn-validate-SuppressionMissionInter" type="button">Oui</button> <button class="button" id="btn-return-6" type="button">Retour</button></div><p class="status" id="status-SuppressionMissionInter"></p></section><section id="sec-userForm-SuppressionMissionOk" class="section-userForm"><h2 class="section-title">Mission(s) supprimée(s)</h2><p id="texte-SuppressionMissionOk"></p><div class="button-container"><button class="button" id="btn-return-7" type="button">Retour</button></div><p class="status" id="status-SuppressionMissionOk"></p></section><section id="sec-userForm-ModifierAffectationMission" class="section-userForm"><h2 class="section-title">Modifier affectation</h2><div class="double-listbox-container"><div class="listbox-container"><label for="listbox-AjouterConsultant">Ajouter Consultant(s):</label> <select id="listbox-AjouterConsultant" class="double-listbox" size="8" multiple="multiple"></select></div><div class="listbox-container"><label for="listbox-EnleverConsultant">Enlever Consultant(s):</label> <select id="listbox-EnleverConsultant" class="double-listbox" size="8" multiple="multiple"></select></div></div><div class="button-container"><button class="button" id="btn-validate-ModifierAffectationMission">Valider</button> <button class="button" id="btn-return-8" type="button">Retour</button></div></section><section id="sec-userForm-AffectationMissionOk" class="section-userForm"><h2 class="section-title">Affectation Modifiée</h2><p id="texte-AffectationMissionOk"></p><div class="button-container"><button class="button" id="btn-return-9" type="button">Retour</button></div><p class="status" id="status-AffectationMissionOk"></p></section><section id="sec-userForm-ModifierAffectationConsultant" class="section-userForm"><h2 class="section-title">Sélectionnez les missions</h2><div class="double-listbox-container"><div class="listbox-container"><label for="listbox-AjouterMission">Ajouter Missions(s):</label> <select id="listbox-AjouterMission" class="double-listbox" size="8" multiple="multiple"></select></div><div class="listbox-container"><label for="listbox-EnleverMission">Enlever Missions(s):</label> <select id="listbox-EnleverMission" class="double-listbox" size="8" multiple="multiple"></select></div></div><div class="button-container"><button class="button" id="btn-validate-ModifierAffectationConsultant">Valider</button> <button class="button" id="btn-return-10" type="button">Retour</button></div></section><section id="sec-userForm-AffectationConsultantOk" class="section-userForm"><h2 class="section-title">Affectation Modifiée</h2><p id="texte-AffectationConsultantOk"></p><div class="button-container"><button class="button" id="btn-return-11" type="button">Retour</button></div><p class="status" id="status-AffectationConsultantOk"></p></section></body></html>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Planning Actuelia</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <script src="https://mordekus.github.io/excel-complement/fdb58264fb885a02976a.js" type="module"></script>
+    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css" />
+    <link href="https://mordekus.github.io/excel-complement/dfdaaa4bf146369082c6.css" rel="stylesheet" />
+    <script defer="defer" src="https://mordekus.github.io/excel-complement/polyfill.d773241b6e8d674dda2d.js"></script>
+    <script defer="defer" src="https://mordekus.github.io/excel-complement/taskpane.5272dba06bb261272269.js"></script>
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter"><img width="120" height="120" src="https://mordekus.github.io/excel-complement/assets/logo-filled.png" alt="Logo Actuelia" title="Logo" />
+        <h1 class="ms-font-xl" style="font-size:26px">Bienvenue dans le planning Actuelia</h1></header>
+    <section id="sec-btn-AjoutMission" class="section-button">
+        <button id="btn-AjoutMission" class="fixed-button">Ajout Mission</button>
+    </section>
+    <section id="sec-btn-Suppression" class="section-button">
+        <button id="btn-Suppression" class="fixed-button">Suppression Mission</button>
+    </section>
+    <section id="sec-btn-ModifierAffectationMission" class="section-button">
+        <button id="btn-ModifierAffectationMission" class="fixed-button">Modifier Affectation</button>
+    </section>
+    <section id="sec-btn-ModifierAffectationConsultant" class="section-button">
+        <button id="btn-ModifierAffectationConsultant" class="fixed-button">Modifier Mission(s)</button>
+    </section>
+    <section id="sec-userForm-AjoutMission" class="section-userForm">
+        <h2 class="section-title">Ajout Mission</h2>
+        <p>Nommez la mission et choisissez l'encadrant :</p>
+        <form>
+            <div class="form-field">
+                <label for="input-text-Mission">Mission :</label>
+                <input id="input-text-Mission" placeholder="Saisissez un texte" />
+            </div>
+            <div class="form-field">
+                <label for="dropdown-Mission">Encadrant :</label>
+                <select id="dropdown-Mission">
+                    <option value="">Chargement...</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button class="button validate-button" id="btn-validate-AjoutMission" type="button">Valider</button>
+                <button class="button return-button" id="btn-return-1" type="button">Retour</button>
+            </div>
+        </form>
+        <p class="status" id="status-AjoutMission"></p>
+    </section>
+    <section id="sec-userForm-SelectionConsultant" class="section-userForm">
+        <h2 class="section-title">Sélection Consultant</h2>
+        <label for="listbox-SelectionConsultant">Choisissez les consultants pour la mission :</label>
+        <div class="div-listbox">
+            <select class="mylistbox" id="listbox-SelectionConsultant" size="10" multiple="multiple"></select>
+            <div class="button-column">
+                <button class="button" id="btn-validate-SelectionConsultant" type="button">Valider</button>
+                <button class="button" id="btn-return-2" type="button">Retour</button>
+            </div>
+        </div>
+        <p class="status" id="status-SelectionConsultant"></p>
+    </section>
+    <section id="sec-userForm-AjoutMissionError" class="section-userForm">
+        <h2 class="section-title">Erreur dans l'ajout de mission</h2>
+        <p>Nombre de mission max atteint. Veuillez supprimer une mission.</p>
+        <div class="button-container">
+            <button class="button" id="btn-validate-AjoutMissionError" type="button">Suppression Mission</button>
+            <button class="button" id="btn-return-3" type="button">Retour</button>
+        </div>
+        <p class="status" id="status-AjoutMissionError"></p>
+    </section>
+    <section id="sec-userForm-AjoutMissionOk" class="section-userForm">
+        <h2 class="section-title">Mission ajoutée</h2>
+        <p id="texte-AjoutMissionOK"></p>
+        <div class="button-container">
+            <button class="button" id="btn-return-4" type="button">Retour</button>
+        </div>
+        <p class="status" id="status-AjoutMissionOk"></p>
+    </section>
+    <section id="sec-userForm-SuppressionMission" class="section-userForm">
+        <h2 class="section-title">Suppression Mission(s)</h2>
+        <label for="listbox-SuppressionMission">Choisissez la mission ou les missions à supprimer :</label>
+        <div class="div-listbox">
+            <select class="mylistbox" id="listbox-SuppressionMission" size="10" multiple="multiple"></select>
+            <div class="button-column">
+                <button class="button" id="btn-validate-SuppressionMission" type="button">Valider</button>
+                <button class="button" id="btn-return-5" type="button">Retour</button>
+            </div>
+        </div>
+        <p class="status" id="status-SuppressionMission"></p>
+    </section>
+    <section id="sec-userForm-SuppressionMissionInter" class="section-userForm">
+        <h2 class="section-title">Suppression Mission(s)</h2>
+        <p id="texte-SuppressionMissionInter"></p>
+        <div class="button-container">
+            <button class="button" id="btn-validate-SuppressionMissionInter" type="button">Oui</button>
+            <button class="button" id="btn-return-6" type="button">Retour</button>
+        </div>
+        <p class="status" id="status-SuppressionMissionInter"></p>
+    </section>
+    <section id="sec-userForm-SuppressionMissionOk" class="section-userForm">
+        <h2 class="section-title">Mission(s) supprimée(s)</h2>
+        <p id="texte-SuppressionMissionOk"></p>
+        <div class="button-container">
+            <button class="button" id="btn-return-7" type="button">Retour</button>
+        </div>
+        <p class="status" id="status-SuppressionMissionOk"></p>
+    </section>
+    <section id="sec-userForm-ModifierAffectationMission" class="section-userForm">
+        <h2 class="section-title">Modifier affectation</h2>
+        <div class="double-listbox-container">
+            <div class="listbox-container">
+                <label for="listbox-AjouterConsultant">Ajouter Consultant(s):</label>
+                <select id="listbox-AjouterConsultant" class="double-listbox" size="8" multiple="multiple"></select>
+            </div>
+            <div class="listbox-container">
+                <label for="listbox-EnleverConsultant">Enlever Consultant(s):</label>
+                <select id="listbox-EnleverConsultant" class="double-listbox" size="8" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="button" id="btn-validate-ModifierAffectationMission">Valider</button>
+            <button class="button" id="btn-return-8" type="button">Retour</button>
+        </div>
+    </section>
+    <section id="sec-userForm-AffectationMissionOk" class="section-userForm">
+        <h2 class="section-title">Affectation Modifiée</h2>
+        <p id="texte-AffectationMissionOk"></p>
+        <div class="button-container">
+            <button class="button" id="btn-return-9" type="button">Retour</button>
+        </div>
+        <p class="status" id="status-AffectationMissionOk"></p>
+    </section>
+    <section id="sec-userForm-ModifierAffectationConsultant" class="section-userForm">
+        <h2 class="section-title">Sélectionnez les missions</h2>
+        <div class="double-listbox-container">
+            <div class="listbox-container">
+                <label for="listbox-AjouterMission">Ajouter Missions(s):</label>
+                <select id="listbox-AjouterMission" class="double-listbox" size="8" multiple="multiple"></select>
+            </div>
+            <div class="listbox-container">
+                <label for="listbox-EnleverMission">Enlever Missions(s):</label>
+                <select id="listbox-EnleverMission" class="double-listbox" size="8" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="button" id="btn-validate-ModifierAffectationConsultant">Valider</button>
+            <button class="button" id="btn-return-10" type="button">Retour</button>
+        </div>
+    </section>
+    <section id="sec-userForm-AffectationConsultantOk" class="section-userForm">
+        <h2 class="section-title">Affectation Modifiée</h2>
+        <p id="texte-AffectationConsultantOk"></p>
+        <div class="button-container">
+            <button class="button" id="btn-return-11" type="button">Retour</button>
+        </div>
+        <p class="status" id="status-AffectationConsultantOk"></p>
+    </section>
+</body>
+
+</html>
