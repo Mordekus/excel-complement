@@ -360,34 +360,34 @@ import {
     ActivationPlanningConsultant,
     modifPlanningConsultant,
     ChgtFeuilleConsultant
-} from "./1_ModifConsultants.js";
+} from "https://mordekus.github.io/excel-complement/Fonctions/1_ModifConsultants.js";
 import {
     ActivationPlanningMission,
     modifPlanningMission,
     ChgtFeuilleMission
-} from "./2_ModifMissions.js";
+} from "https://mordekus.github.io/excel-complement/Fonctions/2_ModifMissions.js";
 import {
     ActivationPlanningGlobal,
     ChgtFeuilleGlobal
-} from "./3_PlanningGlobal.js";
+} from "https://mordekus.github.io/excel-complement/Fonctions/3_PlanningGlobal.js";
 import {
     ActivationPlanningEncadrant,
     ChgtFeuilleEncadrant
-} from "./3_PlanningEncadrant.js";
+} from "https://mordekus.github.io/excel-complement/Fonctions/3_PlanningEncadrant.js";
 import {
     formatProtection,
     formatMissions,
     formatConsultants,
     formatSemaine,
     applyNewRangeToConditionnalFormat
-} from "./0_Format.js";
+} from "https://mordekus.github.io/excel-complement/Fonctions/0_Format.js";
 import {
     handleClick,
     nouvelleMission,
     suppressionMission,
     affectationMission,
     affectationConsultant
-} from "./0_Gestion_des_boutons.js";
+} from "https://mordekus.github.io/excel-complement/Fonctions/0_Gestion_des_boutons.js";
 export var globalVar = {
     debug: !0,
     isProcessing: !1,
